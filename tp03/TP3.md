@@ -47,6 +47,8 @@ int main()
 
 1. Pourquoi n'y a-t-il pas de relation entre `last_wheel` et `wheels[3]` contrairement à `first_wheel` et `wheels[0]` ?
 
+last_wheel n'étant pas une référence contrairement à first_wheel, last_wheel fait une copie de la valeur de wheels[3].
+
 ### Cas B - Pointeurs-observants
 
 ```cpp
@@ -73,8 +75,16 @@ int main()
 ![](images/ex1-b.svg)
 
 1. Dans le graphe d'ownership, comment distingue-t-on un pointeur d'une référence ?
+
+Une référence est marquée par une flèche en pointillé. alors qu'un pointeur il s'agit d'une flêche avec un trait continu.
+
 2. Comment est représenté un pointeur nul ?
+
+Un rond avec une croix.
+
 3. En termes de code, quelles sont les deux différences principales entre un pointeur-observant et une référence ?
+
+Un pointeur on peut l'initialiser à null alors qu'on ne peut pas avec une référence. On peut réassigner le pointeur contrairement à une référence.
 
 ### Cas C - Insertions dans un `std::vector`
 
@@ -167,6 +177,31 @@ bool are_all_positives(std::vector<int> values, int negative_indices_out[], size
 std::string concatenate(char* str1, char* str2);
 ```
 
+Reponse :
+
+```cpp
+// Return the number of occurrences of 'a' found in string 's'.
+int count_a_occurrences(const std::string& s);
+
+// Update function of a rendering program.
+// - dt (delta time) is read by the function to know the time elapsed since the last frame.
+// - errors is a string filled by the function to indicate what errors have occured.
+void update_loop(const float& dt, std::string& errors_out);
+
+// Return whether all numbers in 'values' are positive.
+// If there are negative values in it, fill the array 'negative_indices_out' with the indices
+// of these values and set its size in 'negative_count_out'.
+// ex: auto res = are_all_positive({ 1, -2, 3, -4 }, negative_indices, negative_count);
+//    -> res is false, since not all values are positive
+//    -> negative_indices contains { 1, 3 } because values[1] = -2 and values[3] = -4
+//    -> negative_count is 2
+bool are_all_positives(const std::vector<int>& values, int negative_indices_out[], size_t& negative_count_out);
+
+// Concatenate 'str1' and 'str2' and return the result.
+// The input parameters are not modified by the function.
+std::string concatenate(const char* str1, const char* str2);
+```
+
 ## Exercice 3 - Gestion des resources (55min)
 
 Vous allez créer un logiciel permettant de gérer les salariés de votre entreprise.
@@ -209,6 +244,66 @@ On vous propose trois architectures différentes pour le programme :
 ![](images/ex3-c.svg)
 
 Pour chacune d'entre elles, vous indiquerez les opérations que le programme devrait effectuer pour satisfaire chacun des besoins cités plus haut, sans jamais introduire de dangling-reference.
+
+1. lister tous les salariés,
+A: il suffit juste d'accéder à la collection employees
+B: pareil que pour A sauf qu'il faut parcourir les départements d'abord
+C: pareil que pour A
+
+2. lister tous les départements,
+
+A: on peut accéder à la collection departments
+B: pareil que pour A
+C: pareil que pour A
+
+3. lister les personnes appartenant à un département précis,
+
+A: pour chaque département on a la collection des employés appartenant à ce département
+B: pareil que pour A
+C: pour chaque employé on a un pointeur vers le département qu'il appartient
+
+4. lister tous les managers,
+
+A: il faut regarder les employés un par un et regardr si il existe des personnes dans leur liste de subordonnée.
+B: pareil que pour A
+C: pareil que pour A
+
+
+5. lister les subordonnés d'un manager,
+
+A: on a accès pour chaque employé à leur liste de subordonnés
+B: pareil que pour A
+C: pareil que pour A
+
+6. embaucher un nouveau salarié,
+
+A: il faut ajouter dans la collection employees où se trouve tout les employés de l'entreprise et ajouter dans le département correspondant l'employé dans la liste des employés
+B: on se déplace dans le département auquel le salarié va être affecté puis on l'ajoute dans la liste des employés ensuite on l'ajoute dans la liste des subordonnés d'un autre employé ou si c'est lui qui a des subordonnés on les ajoute dans sa liste à lui
+C: on est sur une structure de "pyramide" , on met l'employé à l'endroit où il doit se trouver dans la pyramide
+
+7. licencier un salarié,
+
+A:
+B:
+C:
+
+8. changer un salarié de département,
+
+A:
+B:
+C:
+
+9. augmenter le salaire d'une personne,
+
+A:
+B:
+C:
+
+10. afficher la somme totale payée pour les salaires par département.
+
+A:
+B:
+C:
 
 ### 2. Compilation via CMake (10min)
 

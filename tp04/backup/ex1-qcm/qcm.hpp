@@ -26,7 +26,7 @@
 #define ANSWER_4 true
 
 // Une variable booléenne se définit avec le type "boolean".
-#define ANSWER_5 false
+#define ANSWER_5 true
 
 // Le constructeur d'une classe n'a pas de type de retour.
 #define ANSWER_6 true
