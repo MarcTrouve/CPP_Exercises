@@ -23,7 +23,7 @@ struct Wheel
 
 struct Car
 {
-    explicit Car(Driver& d)
+    Car(Driver& d)
     : driver { d }
     {}
 
@@ -235,12 +235,15 @@ Dans votre programme, vous aurez les classes suivantes :
 On vous propose trois architectures différentes pour le programme :
 
 **Architecture A**
+
 ![](images/ex3-a.svg)
 
 **Architecture B**
+
 ![](images/ex3-b.svg)
 
 **Architecture C**
+
 ![](images/ex3-c.svg)
 
 Pour chacune d'entre elles, vous indiquerez les opérations que le programme devrait effectuer pour satisfaire chacun des besoins cités plus haut, sans jamais introduire de dangling-reference.
@@ -354,7 +357,7 @@ Décommentez les dernières instructions du `main` pour vous assurer que tout fo
 2. Finalisez l'implémentation du programme afin qu'il supporte tous les besoins demandés :
     - la commande `"d market"` permet d'ajouter un département `market`,
     - la commande `"l"` lister tous les départements,
-    - la commande `"e toto 1250 tata"` permet d'ajouter un employé `toto` payé 1250€ ayant pour manager `tata`,
+    - la commande `"e dep toto 1250 tata"` permet d'ajouter un employé `toto` payé 1250€ ayant pour manager `tata` au département `dep`,
     - la commande `"k"` permet de lister tous les salariés,
     - la commande `"f toto"` permet de supprimer l'employé nommé `toto`,
     - la commande `"n market"` permet de lister tous les salariés du département `market`,

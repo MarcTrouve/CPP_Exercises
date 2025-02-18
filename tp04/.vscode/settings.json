@@ -1,17 +1,37 @@
 {
     "files.associations": {
+<<<<<<< HEAD
         "iosfwd": "cpp",
         "cctype": "cpp",
         "clocale": "cpp",
         "cmath": "cpp",
         "cstdarg": "cpp",
         "cstddef": "cpp",
+=======
+        "string": "cpp",
+        "array": "cpp",
+        "atomic": "cpp",
+        "bit": "cpp",
+        "*.tcc": "cpp",
+        "bitset": "cpp",
+        "cctype": "cpp",
+        "chrono": "cpp",
+        "clocale": "cpp",
+        "cmath": "cpp",
+        "compare": "cpp",
+        "concepts": "cpp",
+        "condition_variable": "cpp",
+        "cstdarg": "cpp",
+        "cstddef": "cpp",
+        "cstdint": "cpp",
+>>>>>>> befeb69c7cece85c012f1148d424a8ddfe174577
         "cstdio": "cpp",
         "cstdlib": "cpp",
         "cstring": "cpp",
         "ctime": "cpp",
         "cwchar": "cpp",
         "cwctype": "cpp",
+<<<<<<< HEAD
         "array": "cpp",
         "atomic": "cpp",
         "bit": "cpp",
@@ -23,6 +43,8 @@
         "concepts": "cpp",
         "condition_variable": "cpp",
         "cstdint": "cpp",
+=======
+>>>>>>> befeb69c7cece85c012f1148d424a8ddfe174577
         "deque": "cpp",
         "list": "cpp",
         "map": "cpp",
@@ -40,7 +62,10 @@
         "random": "cpp",
         "ratio": "cpp",
         "regex": "cpp",
+<<<<<<< HEAD
         "string": "cpp",
+=======
+>>>>>>> befeb69c7cece85c012f1148d424a8ddfe174577
         "string_view": "cpp",
         "system_error": "cpp",
         "tuple": "cpp",
@@ -50,13 +75,24 @@
         "future": "cpp",
         "initializer_list": "cpp",
         "iomanip": "cpp",
+<<<<<<< HEAD
+=======
+        "iosfwd": "cpp",
+>>>>>>> befeb69c7cece85c012f1148d424a8ddfe174577
         "iostream": "cpp",
         "istream": "cpp",
         "limits": "cpp",
         "mutex": "cpp",
         "new": "cpp",
+<<<<<<< HEAD
         "ostream": "cpp",
         "ranges": "cpp",
+=======
+        "numbers": "cpp",
+        "ostream": "cpp",
+        "semaphore": "cpp",
+        "shared_mutex": "cpp",
+>>>>>>> befeb69c7cece85c012f1148d424a8ddfe174577
         "sstream": "cpp",
         "stdexcept": "cpp",
         "stop_token": "cpp",
@@ -65,6 +101,37 @@
         "cinttypes": "cpp",
         "typeinfo": "cpp",
         "variant": "cpp",
+<<<<<<< HEAD
         "__nullptr": "cpp"
     }
+=======
+        "charconv": "cpp",
+        "format": "cpp",
+        "forward_list": "cpp",
+        "ios": "cpp",
+        "locale": "cpp",
+        "xfacet": "cpp",
+        "xhash": "cpp",
+        "xiosbase": "cpp",
+        "xlocale": "cpp",
+        "xlocbuf": "cpp",
+        "xlocinfo": "cpp",
+        "xlocmes": "cpp",
+        "xlocmon": "cpp",
+        "xlocnum": "cpp",
+        "xloctime": "cpp",
+        "xmemory": "cpp",
+        "xstddef": "cpp",
+        "xstring": "cpp",
+        "xtr1common": "cpp",
+        "xtree": "cpp",
+        "xutility": "cpp",
+        "span": "cpp"
+    },
+    "editor.formatOnSave": true,
+    "git.requireGitUserConfig": false,
+    "C_Cpp.intelliSenseEngineFallback": "enabled",
+    "C_Cpp.intelliSenseCachePath": "/tmp/CPP_EXAM/vscode/.cache/vscode-cpptools",
+    "cmake.buildDirectory": "/tmp/CPP_EXAM/build"
+>>>>>>> befeb69c7cece85c012f1148d424a8ddfe174577
 }

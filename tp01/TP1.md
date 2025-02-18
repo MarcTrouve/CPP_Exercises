@@ -107,7 +107,8 @@ Quelle classe de la librairie standard faudrait-il utiliser à la place du table
 
 4. Affichez les valeurs du premier et du dernier élément.
 
-5. La fonction `ajoute_double` pour ajouter à la fin d'un tableau d'entiers le double de chaque valeur déjà présente ne fonctionne pas (pour plusieurs raisons). Corrigez-le, tout en gardant le même type de retour (`void`).
+5. La fonction `ajoute_double` pour ajouter à la fin d'un tableau d'entiers le double de chaque valeur déjà présente ne fonctionne pas (pour plusieurs raisons). Corrigez-le, tout en gardant le même type de retour (`void`).\
+En bonus, essayez d'optimiser cette fonction pour éviter le plus de copies et de déplacements possible du vecteur.
 
 6. Faîtes en sorte d'afficher à nouveau le vecteur après l'appel à `ajoute_double`.  Pour éviter de dupliquer du code, faire une nouvelle fonction libre `affiche`. Attention à ne pas faire de copie inutile: vérifiez avec votre chargé de TP que vous avez choisi la bonne signature pour la fonction.
 

@@ -1,10 +1,23 @@
 cmake_minimum_required(VERSION 3.16)
-project(TP5)
+project(tp05)
 
-add_executable(tp5-ex2
-    2-ptr/main.cpp
-    2-ptr/Object.hpp
+add_executable(ex2
+    ex2/main.cpp
+    ex2/Card.cpp
+    ex2/Player.cpp
+    ex2/Tracker.cpp
 )
 
-target_compile_features(tp5-ex2 PRIVATE cxx_std_17)
-target_compile_options(tp5-ex2 PRIVATE "-Wfatal-errors")
+target_compile_features(ex2 PRIVATE cxx_std_17)
+
+add_executable(ex3
+    ex3/main.cpp
+    ex3/LinkedList.cpp
+    ex3/Link.cpp
+    ex3/Tracker.cpp
+    ex3/Person.cpp
+)
+
+target_compile_features(ex3 PRIVATE cxx_std_17)
+target_compile_features(ex3 PRIVATE )
+
