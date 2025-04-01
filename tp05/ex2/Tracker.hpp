@@ -29,20 +29,20 @@ public:
         return *this;
     }
 
-    Tracker(Tracker&& o)
+    Tracker(Tracker&& o) noexcept
         : _id { o._id }
     {
         _count++;
     }
 
-    Tracker& operator=(Tracker&& other) = default;
+    Tracker& operator=(Tracker&& other) noexcept = default;
 
     ~Tracker() { --_count; }
 
     static int count() { return _count; }
     static int copies() { return _copies; }
 
-    int id() { return _id; }
+    int id() const { return _id; }
 
 private:
     int               _id;
